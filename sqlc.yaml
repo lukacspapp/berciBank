@@ -1,0 +1,14 @@
+version: '2'
+cloud:
+  project: '01HE0B7XYWVX362Y9CVHQW941Y'
+sql:
+- engine: postgresql
+  schema: ./db/migration
+  queries: ./db/query
+  database:
+    managed: true
+  gen:
+    go:
+      package: 'berci_bank'
+      out: "./db/sqlc"
+      sql_package: pgx/v5
