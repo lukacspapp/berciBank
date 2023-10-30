@@ -11,6 +11,6 @@ sql:
   - sqlc/db-prepare
   gen:
     go:
-      package: 'berci_bank'
+      package: 'db'
       out: "./db/sqlc"
       sql_package: pgx/v5

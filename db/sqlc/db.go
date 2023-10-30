@@ -2,7 +2,7 @@
 // versions:
 //   sqlc v1.23.0
 
-package berci_bank
+package db
 
 import (
 	"context"
