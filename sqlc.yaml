@@ -7,6 +7,8 @@ sql:
   queries: ./db/query
   database:
     managed: true
+  rules:
+  - sqlc/db-prepare
   gen:
     go:
       package: 'berci_bank'

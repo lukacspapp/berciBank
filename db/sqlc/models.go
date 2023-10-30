@@ -10,16 +10,17 @@ import (
 
 type Account struct {
 	ID        int64
-	Owner     pgtype.Text
-	Balance   pgtype.Int8
-	Currency  pgtype.Text
+	Owner     string
+	Balance   int64
+	Currency  string
 	CreatedAt pgtype.Timestamptz
 }
 
 type Entry struct {
 	ID        int64
-	AccountID pgtype.Int8
-	Amount    pgtype.Int8
+	AccountID int64
+	// can be positive or negative
+	Amount    int64
 	CreatedAt pgtype.Timestamptz
 }
 

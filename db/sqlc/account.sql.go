@@ -7,8 +7,6 @@ package berci_bank
 
 import (
 	"context"
-
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createAccount = `-- name: CreateAccount :one
@@ -24,9 +22,9 @@ INSERT INTO accounts (
 `
 
 type CreateAccountParams struct {
-	Owner    pgtype.Text
-	Balance  pgtype.Int8
-	Currency pgtype.Text
+	Owner    string
+	Balance  int64
+	Currency string
 }
 
 func (q *Queries) CreateAccount(ctx context.Context, arg CreateAccountParams) (Account, error) {
